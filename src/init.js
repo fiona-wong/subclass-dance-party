@@ -33,10 +33,12 @@ $(document).ready(function() {
   });
 
   $('.lineUpButton').on('click', function(event) {
-    // console.log(window.dancers);
-    
     for (var i = 0; i < window.dancers.length; i++) {
-      window.dancers[i].$node.animate({top: '50%'});
+      if (window.dancers[i].constructor !== BouncyDancer) {
+        window.dancers[i].$node.animate({top: '50%'});
+      } else if (window.dancers[i].constructor === BouncyDancer) {
+        window.dancers[i].$node.addClass('lineUpBouncyDancers');
+      }
     }
   });
 });
