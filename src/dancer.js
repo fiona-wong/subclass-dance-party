@@ -40,4 +40,6 @@ Dancer.prototype.setColor = function() {
   this.$node.css(styleSettings);
 };
 
+
+
   

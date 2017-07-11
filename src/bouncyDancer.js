@@ -8,8 +8,6 @@ BouncyDancer.prototype.constructor = BouncyDancer;
 
 BouncyDancer.prototype.step = function(timeBetweenSteps) {
   Dancer.prototype.step.call(this, timeBetweenSteps);
-  // this.$node.animate({top: '900px'});
-  // this.$node.animate({top: (Math.random() * 800) + 'px'});
 };
 
 BouncyDancer.prototype.applyEffect = function() {
