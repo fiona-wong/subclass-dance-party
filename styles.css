@@ -3,7 +3,7 @@ body, html{
 }
 body{
   margin: 0px;
-  background-image: url('adventure_time.jpg');
+  background-image: url('resources/adventure_time.jpg');
   /*background-color:#444;*/
   background-size: cover;
   font-size: 18px;
@@ -35,16 +35,28 @@ body, a:link, a:visited, a:active{
   background-color: rgb(0,0,0,0);*/
   border: 0px !important;
   border-radius: 0px;
-  width: 300px;
-  height: 225px;
-  background: url('jake_animated_nobg.gif') repeat;
+  width: 400px;
+  height: 300px;
+  background: url('resources/jake_animated_nobg.gif') repeat;
   background-size: cover;
   -webkit-animation-name: spin;
   -webkit-animation-duration: 2000ms;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
 }
+.blinkingDancer{
+  border: 0px !important;
+  width: 100px;
+  height: 100px;
+  background: url('resources/beemo_dancing.gif') repeat;
+  background-size: cover;
+}
 .explodingDancer{
+  border: 0px !important;
+  width: 50px;
+  height: 50px;
+  background: url('resources/gunther_dancing_cropped.gif') repeat;
+  background-size: cover;
   -webkit-animation-name: grow-shrink;
   -webkit-animation-duration: 500ms;
   -webkit-animation-iteration-count: infinite;
@@ -53,6 +65,11 @@ body, a:link, a:visited, a:active{
 }
 
 .bouncingDancer{
+  border: 0px !important;
+  width: 150px;
+  height: 150px;
+  background: url('resources/lp_princess.gif') repeat;
+  background-size: cover;
   top: $("body").height() * Math.random();
   -webkit-animation-name: bounce;
   -webkit-animation-duration: 500ms;
@@ -70,11 +87,12 @@ body, a:link, a:visited, a:active{
 }
 @keyframes grow-shrink{
     from {
-        border-width: 10px;
+      width: 50px;
+      height: 50px;
     }
     to {
-        border-width: 50px;
-        border-radius: 50px;
+      width: 200px;
+      height: 200px;
     }
 }
 
