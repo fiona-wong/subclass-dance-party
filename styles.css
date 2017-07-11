@@ -25,17 +25,35 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
-.rotate{
+.rotatingDancer{
   margin: 20px;
-    width: 100px;
-    height: 100px;
-    background-color: rgb(0,0,0,0);
-    -webkit-animation-name: spin;
-    -webkit-animation-duration: 2000ms;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    
+  width: 100px;
+  height: 100px;
+  border-radius: 2px;
+  background-color: rgb(0,0,0,0);
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 2000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
 }
+.explodingDancer{
+  -webkit-animation-name: grow-shrink;
+  -webkit-animation-duration: 500ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-direction: alternate;
+}
+
+@keyframes grow-shrink{
+    from {
+        border-width: 10px;
+    }
+    to {
+        border-width: 50px;
+        border-radius: 50px;
+    }
+}
+
 @keyframes spin {
     from {
         transform:rotate(0deg);
@@ -43,4 +61,9 @@ body, a:link, a:visited, a:active{
     to {
         transform:rotate(360deg);
     }
+}
+
+.lineUpButton{
+  padding:5px 12px;
+  float:right;
 }
