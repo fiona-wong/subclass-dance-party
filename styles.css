@@ -3,8 +3,9 @@ body, html{
 }
 body{
   margin: 0px;
-  background-image: url('geo_background_bright.jpg');
+  background-image: url('adventure_time.jpg');
   /*background-color:#444;*/
+  background-size: cover;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -27,11 +28,17 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 .rotatingDancer{
-  margin: 20px;
+  /*margin: 20px;
   width: 100px;
   height: 100px;
   border-radius: 2px;
-  background-color: rgb(0,0,0,0);
+  background-color: rgb(0,0,0,0);*/
+  border: 0px !important;
+  border-radius: 0px;
+  width: 300px;
+  height: 225px;
+  background: url('jake_animated_nobg.gif') repeat;
+  background-size: cover;
   -webkit-animation-name: spin;
   -webkit-animation-duration: 2000ms;
   -webkit-animation-iteration-count: infinite;
