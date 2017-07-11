@@ -30,6 +30,20 @@ $(document).ready(function() {
     $('body').append(dancer.$node);
 
     window.dancers.push(dancer);
+
+    var watchClick = function() {
+      var $dancer = dancer;
+      dancer.$node.unbind().click(function(event) {
+        var top = Math.random() * 800;
+        var left = Math.random() * 800;
+        $dancer.$node.animate({top: top + 'px', left: left + 'px'});
+        watchClick();
+      });
+    };
+    
+    watchClick();    
+
+    
   });
 
   $('.lineUpButton').on('click', function(event) {
@@ -41,5 +55,7 @@ $(document).ready(function() {
       }
     }
   });
+
+  
 });
 

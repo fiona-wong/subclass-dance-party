@@ -13,3 +13,4 @@ ExplodingDancer.prototype.step = function(timeBetweenSteps) {
 ExplodingDancer.prototype.applyEffect = function() {
   this.$node.addClass('explodingDancer');
 };
+
