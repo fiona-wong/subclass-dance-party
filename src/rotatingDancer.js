@@ -11,6 +11,5 @@ RotatingDancer.prototype.step = function(timeBetweenSteps) {
 };
 
 RotatingDancer.prototype.applyEffect = function() {
-  this.$node.css({'border-radius': '2px'});
-  this.$node.addClass('rotate');
+  this.$node.addClass('rotatingDancer');
 };
