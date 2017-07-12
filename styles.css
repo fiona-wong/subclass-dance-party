@@ -50,11 +50,11 @@ body, a:link, a:visited, a:active{
   height: 100px;
   background: url('resources/beemo_dancing.gif') repeat;
   background-size: cover;
-  -webkit-animation-name: blinking;
+  /*-webkit-animation-name: blinking;
   -webkit-animation-duration: 100ms;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-  -webkit-animation-direction: alternate;
+  -webkit-animation-direction: alternate;*/
 }
 .explodingDancer{
   border: 0px !important;
@@ -95,7 +95,6 @@ body, a:link, a:visited, a:active{
   border: 0px !important;
   width: 200px;
   height: 200px;
-  /*background: url('resources/finn_spit.gif') repeat;*/
   background-size: cover;
   -webkit-animation: none !important;
 }
