@@ -1,7 +1,8 @@
 // Creates and returns a new dancer object that can step
 var Dancer = function(top, left, timeBetweenSteps) {
   
-
+  this.top = top;
+  this.left = left;
   // use jQuery to create an HTML <span> tag
   this.$node = $('<span class="dancer"></span>');
   this.step(timeBetweenSteps);
@@ -11,12 +12,15 @@ var Dancer = function(top, left, timeBetweenSteps) {
   this.setColor();  
   this.setPosition(top, left);
   
+  
 };
 
 Dancer.prototype.step = function(timeBetweenSteps) {
   // the basic dancer doesn't do anything interesting at all on each step,
   // it just schedules the next step
   setTimeout(this.step.bind(this, timeBetweenSteps), timeBetweenSteps);
+  //console.log(this.$node.position());
+  this.detectCollision();
 };
 
 Dancer.prototype.setPosition = function(top, left) {
@@ -40,6 +44,20 @@ Dancer.prototype.setColor = function() {
   this.$node.css(styleSettings);
 };
 
+Dancer.prototype.detectCollision = function() {
+  //console.log(this.$node.position().top);
+  //console.log(this.left);
+  for (var i = 0; i < window.dancers.length; i++) {
+    var aSqrd = Math.pow(window.dancers[i].top - this.$node.position().top, 2);
+    var bSqrd = Math.pow(window.dancers[i].left - this.$node.position().left, 2);
+    var c = Math.sqrt(aSqrd + bSqrd);
+    //console.log(c);
+    if (c <= 200 && window.dancers[i] !== this) {
+      this.$node.css({display: 'none'});
+      //console.log('COLLISION DETECTED');
+    }
+  }
+};
 
 
   
