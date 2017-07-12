@@ -45,17 +45,14 @@ Dancer.prototype.setColor = function() {
 };
 
 Dancer.prototype.detectCollision = function() {
-  //console.log(this.$node.position().top);
-  //console.log(this.left);
   for (var i = 0; i < window.dancers.length; i++) {
     var aSqrd = Math.pow(window.dancers[i].top - this.$node.position().top, 2);
     var bSqrd = Math.pow(window.dancers[i].left - this.$node.position().left, 2);
     var c = Math.sqrt(aSqrd + bSqrd);
-    //console.log(c);
+
     if (c <= 100 && window.dancers[i] !== this) {
       this.$node.addClass('onCollision').animate({top: '75%'});
       window.dancers[i].$node.addClass('onCollision').animate({top: '75%'});
-      //console.log('COLLISION DETECTED');
     }
   }
 };
