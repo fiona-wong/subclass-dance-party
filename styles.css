@@ -99,6 +99,15 @@ body, a:link, a:visited, a:active{
   -webkit-animation: none !important;
 }
 
+.onLineUp{
+  border: 0px !important;
+  /*top: 50% !important;*/
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  -webkit-animation: none !important;
+}
+
 @keyframes grow-shrink{
     from {
       width: 50px;
