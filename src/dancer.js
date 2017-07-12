@@ -3,6 +3,7 @@ var Dancer = function(top, left, timeBetweenSteps) {
   
   this.top = top;
   this.left = left;
+  this.isLinedUp = false;
   // use jQuery to create an HTML <span> tag
   this.$node = $('<span class="dancer"></span>');
   this.step(timeBetweenSteps);
@@ -20,7 +21,9 @@ Dancer.prototype.step = function(timeBetweenSteps) {
   // it just schedules the next step
   setTimeout(this.step.bind(this, timeBetweenSteps), timeBetweenSteps);
   //console.log(this.$node.position());
-  this.detectCollision();
+  if (!this.isLinedUp) {
+    this.detectCollision();
+  }
 };
 
 Dancer.prototype.setPosition = function(top, left) {
