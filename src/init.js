@@ -33,6 +33,7 @@ $(document).ready(function() {
 
     var watchClick = function() {
       var $dancer = dancer;
+      dancer.isLinedUp = false;
       dancer.$node.unbind().click(function(event) {
         var top = Math.random() * 800;
         var left = Math.random() * 800;
