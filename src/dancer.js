@@ -52,8 +52,9 @@ Dancer.prototype.detectCollision = function() {
     var bSqrd = Math.pow(window.dancers[i].left - this.$node.position().left, 2);
     var c = Math.sqrt(aSqrd + bSqrd);
     //console.log(c);
-    if (c <= 200 && window.dancers[i] !== this) {
-      this.$node.css({display: 'none'});
+    if (c <= 100 && window.dancers[i] !== this) {
+      this.$node.addClass('onCollision').animate({top: '75%'});
+      window.dancers[i].$node.addClass('onCollision').animate({top: '75%'});
       //console.log('COLLISION DETECTED');
     }
   }
