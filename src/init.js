@@ -47,11 +47,12 @@ $(document).ready(function() {
   $('.lineUpButton').on('click', function(event) {
     for (var i = 0; i < window.dancers.length; i++) {
       window.dancers[i].isLinedUp = true;
-      if (window.dancers[i].constructor !== BouncyDancer) {
-        window.dancers[i].$node.animate({top: '50%'});
-      } else if (window.dancers[i].constructor === BouncyDancer) {
-        window.dancers[i].$node.addClass('lineUpBouncyDancers');
-      }
+      // if (window.dancers[i].constructor !== BouncyDancer) {
+      //   window.dancers[i].$node.animate({top: '50%'});
+      // } else if (window.dancers[i].constructor === BouncyDancer) {
+      //   window.dancers[i].$node.addClass('lineUpBouncyDancers');
+      // }
+      window.dancers[i].$node.addClass('onLineUp').animate({top: '50%'});
     }
   });
 });
